@@ -25,88 +25,98 @@
 		<a class="navbar-brand font-weight-bold" href="<?= base_url()?>">OpenHouse CDS Santa Ana &starf;</a>
 		<button class="navbar-toggler d-lg-none font-weight-bolder active" type="button" data-toggle="collapse" data-target="#collapsibleNavId" >&equiv;</button>
 		<div class="collapse navbar-collapse" id="collapsibleNavId">
+
 			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-				<li class="nav-item active">
-					<a class="nav-link text-white" onClick="">Responder</a>
-				</li>
-				<!-- <li class="nav-item active">
-					<a class="nav-link text-white" onClick="">Respuestas</a>
-				</li> -->
-				<li class="nav-item dropdown bg-blueu">
-					<a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mas</a>
+				<li class="nav-item dropdown bg-blueu " >
+					<a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administrar</a>
 					<div class="dropdown-menu bg-blueu" aria-labelledby="dropdownId">
-						<a class="dropdown-item text-white" onClick="">Proyectos</a>
-						<a class="dropdown-item text-white" onClick="">Preguntas</a>
-						<a class="dropdown-item text-white" onClick="">Respuestas</a>
+						<a class="dropdown-item text-white" onClick="mostrarProyectos()">Proyectos</a>
+						<a class="dropdown-item text-white" onClick="mostrarPreguntas()">Preguntas</a>
+						<a class="dropdown-item text-white" onClick="mostrarRespuestas()">Respuestas</a>
 					</div>
 				</li>
 			</ul>
+
 		</div>
 	</nav>
 
+	<!-- El contenedor principal -->
 	<div class="container-fluid mt-5 mb-5" id="main-content">
-
-	<div class="container-fluid text-right mt-3">
-		<button class="btn btn-success btn-greenu mx-2" data-toggle="modal" data-target="#modelId"> Agregar nuevo proyecto </button>
-	</div>
-
-		<div class=" mx-2 mt-3">
-			<table class="table table-borderless table-responsive-xl table-sm align-middle">
-				<thead class="bg-dark text-white text-center align-middle">
-					<tr>
-						<!-- <th>ID</th> -->
-						<th>PROYECTO</th>
-						<th>NIVEL</th>
-						<th>COHORTE</th>
-						<th colspan="2">Opciones</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr class="border-bottom border-dark">
-						<!-- <td>1</td> -->
-						<td>algo del proyecto</td>
-						<td>1</td>
-						<td>2</td>
-						<td rowspan="2" class="align-middle"><button class="btn btn-block btn-warning bg-orangeu">Editar</button></td>
-						<td rowspan="2" class="align-middle"><button class="btn btn-block btn-danger bg-redu">Eliminar</button></td>
-					</tr>
-					<tr class="border-bottom border-dark">
-						<td colspan="3">
-							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt, fugit! Cumque aliquam dolores consectetur eveniet unde, doloremque sapiente dolorum laborum magni optio ipsam asperiores rerum vitae provident totam libero consequatur!
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
+			<!-- cortar luego  -->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-12">
+						<label for="cursos" class="font-weight-bold">Proyectos en OPEN HOUSE CDS Santa Ana</label>
+					</div>
+					<div class="form-group col-xs-12 col-sm-12 col-md-9 col-12">
+						<select class="form-control" name="cursos" id="">
+							<option>bla</option>
+							<option>blu</option>
+							<option>blo</option>
+						</select>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-3 col-12">
+						<button name="responder" id="responder" class="btn btn-primary btn-block" type="button">Responder</button>
+					</div>
+					
+				</div>
+			</div>
+			<!-- cortar luego -->
+			<!-- Cortar tambien -->
+			<div class="container ">
+				<table class="table table-reponsive table-borderless border border-secondary">
+					<thead class="bg-medio text-white">
+						<tr>
+							<th colspan="6" class="align-middle text-center">Preguntas</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td rowspan="3" class="text-center align-middle border-bottom border-dark font-weight-bold">
+								1
+							</td>
+							<td colspan="5" class="text-justify align-middle">
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, eius distinctio labore nihil deleniti cupiditate. Sint, obcaecati? Dolorum nam magnam possimus harum. Dolor error iure nostrum nobis, voluptatem quod sint!
+							</td>
+						</tr>
+						<tr class="bg-claro text-center">
+							<td>Regular</td>
+							<td>Aceptable</td>
+							<td>Bueno</td>
+							<td>Muy bueno</td>
+							<td>Excelente</td>
+						</tr>
+						<tr class="text-center align-middle border-bottom border-dark" >
+							<td>
+								<input type="radio" class="radio-respuestas" name="radio-" id="radio-" value="1">
+							</td>
+							<td>
+								<input type="radio" class="radio-respuestas" name="radio-" id="radio-" value="2">
+							</td>
+							<td>
+								<input type="radio" class="radio-respuestas" name="radio-" id="radio-" value="3">
+							</td>
+							<td>
+								<input type="radio" class="radio-respuestas" name="radio-" id="radio-" value="4">
+							</td>
+							<td>
+								<input type="radio" class="radio-respuestas" name="radio-" id="radio-" value="5s">
+							</td>
+						</tr>
 			
+					</tbody>
+				</table>
+			</div>
+			<!-- Cortar tambien -->
 	</div>
+
 	<div class="container-fluid postition fixed-bottom text-center bg-redu text-white font-weigth-bold">
 		<p class="my-2">
 		CDS Santa Ana <small>Copyright &copy; Sigfrid</small>
 		</p>
 	</div>
 	
-	
-	<!-- Modal -->
-	<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-		<div class="modal-dialog modal-xl" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title">sm</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-				</div>
-				<div class="modal-body">
-					Body
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-danger bg-redu" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-success bg-greenu">Save</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
+<script src="<?= base_url('assets/js/main.js')?>"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>

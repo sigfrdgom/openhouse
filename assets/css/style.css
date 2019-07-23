@@ -10,3 +10,29 @@
 .bg-greenu{
     background-color: #b8ca00;
 }
+
+.dropdown-item:hover{
+    background-color: #ba0c2f;
+}
+
+.bg-claro{
+    background-color: #96adde;
+}
+
+.bg-medio{
+    background-color: #bd3053;
+}
+
+.radio-respuestas{
+    width: 100%; 
+    height: 2em;
+    
+    color: #ba0c2f;
+    
+    
+}
+
+
+.radio-respuestas:checked{
+    background-color: #ba0c2f;
+}

@@ -2,7 +2,7 @@
     <div class="modal-content">
         <div class="modal-header">
             <h5 class="modal-title">Agregar Proyecto</h5>
-                <button type="button" class="close" data-dismiss="modal" id="cerrar">
+                <button type="button" class="close" data-dismiss="modal">
                     <span>&times;</span>
                 </button>
         </div>

@@ -1,5 +1,5 @@
 <div class="container-fluid text-right mt-3">
-    <button class="btn btn-success btn-greenu btn-block" data-toggle="modal" data-target="#modal-proyectos"> Agregar nuevo proyecto </button>
+    <button class="btn btn-success btn-greenu btn-block" data-toggle="modal" data-target="#modal-preguntas" onClick="mostrarFormPreguntas()"> Agregar nueva pregunta </button>
 </div>
 
 <div class="mx-2 mt-3" >
@@ -7,18 +7,17 @@
         <thead class="bg-dark text-white text-center align-middle">
             <tr>
                 <!-- <th>ID</th> -->
-                <th>PROYECTO</th>
-                <th>NIVEL</th>
-                <th>COHORTE</th>
+                <th>PREGUNTA</th>
+                <th>CATEGORIA</th>
                 <th colspan="2">Opciones</th>
             </tr>
         </thead>
-        <tbody  id="tabla-proyectos">
+        <tbody  id="tabla-preguntas">
             
         </tbody>
-    </table> 
+    </table>
 </div>
 
 <!-- Modal -->
-<div class="modal fade align-middle" id="modal-proyectos">
+<div class="modal fade align-middle" id="modal-preguntas">
 </div>
