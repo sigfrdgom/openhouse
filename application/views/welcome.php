@@ -33,7 +33,7 @@
 					<a class="nav-link text-white" onClick="">Respuestas</a>
 				</li> -->
 				<li class="nav-item dropdown bg-blueu">
-					<a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+					<a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mas</a>
 					<div class="dropdown-menu bg-blueu" aria-labelledby="dropdownId">
 						<a class="dropdown-item text-white" onClick="">Proyectos</a>
 						<a class="dropdown-item text-white" onClick="">Preguntas</a>
@@ -44,13 +44,69 @@
 		</div>
 	</nav>
 
-	<div class="container-fluid mt-3 mb-5" id="main-content">
-		
+	<div class="container-fluid mt-5 mb-5" id="main-content">
+
+	<div class="container-fluid text-right mt-3">
+		<button class="btn btn-success btn-greenu mx-2" data-toggle="modal" data-target="#modelId"> Agregar nuevo proyecto </button>
+	</div>
+
+		<div class=" mx-2 mt-3">
+			<table class="table table-borderless table-responsive-xl table-sm align-middle">
+				<thead class="bg-dark text-white text-center align-middle">
+					<tr>
+						<!-- <th>ID</th> -->
+						<th>PROYECTO</th>
+						<th>NIVEL</th>
+						<th>COHORTE</th>
+						<th colspan="2">Opciones</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="border-bottom border-dark">
+						<!-- <td>1</td> -->
+						<td>algo del proyecto</td>
+						<td>1</td>
+						<td>2</td>
+						<td rowspan="2" class="align-middle"><button class="btn btn-block btn-warning bg-orangeu">Editar</button></td>
+						<td rowspan="2" class="align-middle"><button class="btn btn-block btn-danger bg-redu">Eliminar</button></td>
+					</tr>
+					<tr class="border-bottom border-dark">
+						<td colspan="3">
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt, fugit! Cumque aliquam dolores consectetur eveniet unde, doloremque sapiente dolorum laborum magni optio ipsam asperiores rerum vitae provident totam libero consequatur!
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+			
 	</div>
 	<div class="container-fluid postition fixed-bottom text-center bg-redu text-white font-weigth-bold">
+		<p class="my-2">
 		CDS Santa Ana <small>Copyright &copy; Sigfrid</small>
+		</p>
 	</div>
 	
+	
+	<!-- Modal -->
+	<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+		<div class="modal-dialog modal-xl" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">sm</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+				</div>
+				<div class="modal-body">
+					Body
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger bg-redu" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-success bg-greenu">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>
