@@ -2,7 +2,7 @@
     <div class="modal-content">
         <div class="modal-header">
             <h5 class="modal-title">Agregar Proyecto</h5>
-                <button type="button" class="close" data-dismiss="modal" id="cerrar">
+                <button type="button" class="close" id="cerrar" data-dismiss="modal" >
                     <span>&times;</span>
                 </button>
         </div>
@@ -15,7 +15,10 @@
                 </div>
                 <div class="form-group">
                     <label for="descripcion" class="font-weigth-bold">Descripción del proyecto</label>
-                    <input type="text" class="form-control" name="descripcion" id="descripcion" placeholder="Ingrese la descripción del proyectos">
+    
+                    <textarea class="form-control" name="descripcion" id="descripcion" rows="3" placeholder="Ingrese la descripción del proyectos" max="512" ></textarea>
+                    
+                    <!-- <input type="text" class="form-control" name="descripcion" id="descripcion" placeholder="Ingrese la descripción del proyectos"> -->
                 </div>
                 <div class="form-group">
                     <label for="cohorte">Selecciona un COHORTE</label>

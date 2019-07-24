@@ -51,11 +51,11 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `openhouse`.`respuestas` ;
 
 CREATE TABLE IF NOT EXISTS `openhouse`.`respuestas` (
-  `id_respuestas` INT NOT NULL AUTO_INCREMENT,
+  `id_respuesta` INT NOT NULL AUTO_INCREMENT,
   `id_proyecto` INT NOT NULL,
   `id_pregunta` INT NOT NULL,
   `calificacion` VARCHAR(512) NOT NULL,
-  PRIMARY KEY (`id_respuestas`),
+  PRIMARY KEY (`id_respuesta`),
   INDEX `fk_proyectos_idx` (`id_proyecto` ASC),
   INDEX `fk_preguntas_idx` (`id_pregunta` ASC),
   CONSTRAINT `fk_proyectos`

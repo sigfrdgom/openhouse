@@ -1,3 +1,14 @@
+// ---------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------
+//  main view
+// ---------------------------------------------------------------------------------------------
+
+
+
+// ---------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------
+
+
 // Una constante para la URL del proyecto
 
 const url = "http://localhost/openhouse/"
@@ -89,8 +100,8 @@ function guardarProyecto() {
                 document.getElementById('mensajes').innerHTML="";
                 mostrarTablaProyectos();
                 mostrarFormProyecto();
-                close()
-                confirmarGuardado()
+                confirmarGuardado();
+                cerrar();
             }
         }
         var data = new FormData();
@@ -122,8 +133,8 @@ function actualizarProyecto() {
                 document.getElementById('mensajes').innerHTML="";
                 mostrarTablaProyectos();
                 mostrarFormProyecto();
-                close()
-                confirmarActualizado()
+                confirmarActualizado();
+                cerrar();
             }
         }
         var data = new FormData();
@@ -317,3 +328,43 @@ function mostrarTablaRespuestas(){
     peticion.open('GET',url+"respuestas/mostrarTabla")
     peticion.send()
 }
+
+
+
+// ---------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------
+//      Para la funcionabilidad de la APP
+// ---------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------
+
+
+function mostrarSelectCurso() {
+    var peticion = new XMLHttpRequest();
+    peticion.onreadystatechange = function () { 
+        if (peticion.readyState == 4) {
+            document.getElementById('main-content').innerHTML=this.responseText;
+        }
+    }
+    peticion.open('GET',url+"respuestas/mostrarProyectos");
+    peticion.send();
+}
+
+function cargarCuestionario() {
+    var id = document.getElementById('id').value
+    if (id == '') {
+        swal("Escoge un curso por favor.")
+    }else{
+        var peticion = new XMLHttpRequest();
+        peticion.onreadystatechange = function () { 
+            if (peticion.readyState == 4) {
+                document.getElementById('main-content').innerHTML=this.responseText;
+                document.getElementById('id_proyecto').setAttribute('value',id)
+            }
+        }
+        peticion.open('GET',url+"respuestas/mostrarCuestionario");
+        peticion.send();
+    }
+
+    
+}
+

@@ -42,72 +42,20 @@
 
 	<!-- El contenedor principal -->
 	<div class="container-fluid mt-5 mb-5" id="main-content">
-			<!-- cortar luego  -->
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12 col-12">
-						<label for="cursos" class="font-weight-bold">Proyectos en OPEN HOUSE CDS Santa Ana</label>
-					</div>
-					<div class="form-group col-xs-12 col-sm-12 col-md-9 col-12">
-						<select class="form-control" name="cursos" id="">
-							<option>bla</option>
-							<option>blu</option>
-							<option>blo</option>
-						</select>
-					</div>
-					<div class="col-xs-12 col-sm-12 col-md-3 col-12">
-						<button name="responder" id="responder" class="btn btn-primary btn-block" type="button">Responder</button>
-					</div>
-					
+			<div class="container align-middle">
+				<h4 class="text-center mb-2">Retroalimentacion Open House CDS Santa Ana</h4><br>
+				<p class="text-justify mx-5" style="font-size: 1.1em">
+				A continuación se presenta un breve instrumento de recolección de datos para poder obtener una retroalimentación de su parte como asistente al Open House de CDS Santa Ana.
+				</p>
+				<p class="text-justify mx-5"  style="font-size: 1.1em">
+				La información que se proporcione será anónima y será de ayuda para mejorar la calidad de los sistemas presentados, ayudando así a mejorar la calidad de estos si lo requieren, y motivar a los participantes del programa CDS a seguir adelante y mejorar cada dia mas tanto como personas y en los productos de software que estos puedan desarrollar.
+				</p>
+
+				<div class="mx-5 my-3 mt-5 text-center">
+					<button type="button" class="mr-5 btn btn-primary btn-lg px-5 py-3 font-weight-bolder btn-block" onclick="mostrarSelectCurso()">INICIAR</button>
 				</div>
 			</div>
-			<!-- cortar luego -->
-			<!-- Cortar tambien -->
-			<div class="container ">
-				<table class="table table-reponsive table-borderless border border-secondary">
-					<thead class="bg-medio text-white">
-						<tr>
-							<th colspan="6" class="align-middle text-center">Preguntas</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td rowspan="3" class="text-center align-middle border-bottom border-dark font-weight-bold">
-								1
-							</td>
-							<td colspan="5" class="text-justify align-middle">
-								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, eius distinctio labore nihil deleniti cupiditate. Sint, obcaecati? Dolorum nam magnam possimus harum. Dolor error iure nostrum nobis, voluptatem quod sint!
-							</td>
-						</tr>
-						<tr class="bg-claro text-center">
-							<td>Regular</td>
-							<td>Aceptable</td>
-							<td>Bueno</td>
-							<td>Muy bueno</td>
-							<td>Excelente</td>
-						</tr>
-						<tr class="text-center align-middle border-bottom border-dark" >
-							<td>
-								<input type="radio" class="radio-respuestas" name="radio-" id="radio-" value="1">
-							</td>
-							<td>
-								<input type="radio" class="radio-respuestas" name="radio-" id="radio-" value="2">
-							</td>
-							<td>
-								<input type="radio" class="radio-respuestas" name="radio-" id="radio-" value="3">
-							</td>
-							<td>
-								<input type="radio" class="radio-respuestas" name="radio-" id="radio-" value="4">
-							</td>
-							<td>
-								<input type="radio" class="radio-respuestas" name="radio-" id="radio-" value="5s">
-							</td>
-						</tr>
 			
-					</tbody>
-				</table>
-			</div>
-			<!-- Cortar tambien -->
 	</div>
 
 	<div class="container-fluid postition fixed-bottom text-center bg-redu text-white font-weigth-bold">

@@ -24,7 +24,7 @@ class RespuestasModel extends CI_Model {
 
   public function create($datos)
   {
-    $sql="INSERT INTO  respuestas  ( id_respuesta ,  id_proyecto ,  id_pregunta ,  calificacion ) VALUES (NULL, ?, ?, ?, ?);";
+    $sql="INSERT INTO  respuestas  ( id_respuesta ,  id_proyecto ,  id_pregunta ,  calificacion ) VALUES (NULL, ?, ?, ?);";
     $this->db->query($sql,$datos);
   }
 
@@ -37,6 +37,13 @@ class RespuestasModel extends CI_Model {
   public function delete($datos)
   {
     $sql="DELETE FROM respuestas WHERE id_respuesta = ? ;";
+    $this->db->query($sql,$datos);
+  }
+
+  public function rankingPorProyecto($id)
+  {
+    $sql="SELECT r.id_proyecto,proyectos.nombre, AVG(r.calificacion) as ranking FROM proyectos, respuestas r INNER JOIN preguntas p ON r.id_pregunta=p.id_pregunta WHERE p.categoria != 'COMENTARIO' and proyectos.id_proyecto=r.id_proyecto and r.id_proyecto= ?";
+    $datos=['id_proyecto'=>$id];
     $this->db->query($sql,$datos);
   }
 }
