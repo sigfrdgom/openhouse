@@ -19,11 +19,15 @@ function cerrar() {
 }
 
 function confirmarActualizado() {
-    swal("Actualizado", "El registro fue actualizado", "success");
+    swal("Actualizado", "El registro fue actualizado", "info");
 }
 
 function confirmarGuardado() {
-    swal("Guardado", "El registro fue guardado", "success");
+    swal("Guardado", "El registro fue guardado", "info");
+}
+
+function confirmarEliminado() {
+    swal("Eliminado", "El registro fue eliminado, la operación no se puede deshacer", "info");
 }
 // ---------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------
@@ -364,7 +368,30 @@ function cargarCuestionario() {
         peticion.open('GET',url+"respuestas/mostrarCuestionario");
         peticion.send();
     }
+}
 
+function eliminarRespuesta($id) {
+    swal({
+        title: "Eliminar",
+        text: "¿Estas seguro de que quieres eliminar la respuesta?",
+        icon: "warning",
+        buttons: ["No","Si!"],
+    })
+    .then((value) => {
+        if (value) {
+            var peticion= new XMLHttpRequest()
+            peticion.onreadystatechange = function () {
+                if (peticion.readyState == 4) {
+                    mostrarTablaRespuestas()
+                    confirmarEliminado()
+                }
+            }
+            var data = new FormData()
+            data.append('id_respuesta',$id)
+            peticion.open('POST',url+'respuestas/eliminar')
+            peticion.send(data)
+        }
+    });
     
 }
 

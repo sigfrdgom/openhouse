@@ -6,7 +6,7 @@
         <td  class="align-middle"><?= $item->nombre ?></td>
         <!-- <td><?= $item->id_pregunta ?></td> -->
         <td  class="align-middle"><?= $item->pregunta ?></td>
-        <td class="text-center font-weight-bold"><?= $item->calificacion ?></td>
+        <td class="text-center font-weight-bold align-middle"><?= $item->calificacion ?></td>
         
         <!-- <td  class="align-middle"><button class="btn btn-block btn-warning bg-orangeu" 
         data-toggle="modal" data-target="#modal-respuestas" onclick="mostrarFormDataRespuesta(<?= $item->id_respuesta ?>)">Editar</button></td> -->
